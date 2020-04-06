@@ -24,7 +24,6 @@
 <script>
 
 export default {
-  name: 'Login',
   data () {
     return {
       loginForm: {
@@ -47,7 +46,7 @@ export default {
           password: this.loginForm.password
         }))
         // user信息存到sessionStorage  注意吧obj对象转化
-        window.sessionStorage.setItem('user', JSON.stringify(res.obj))
+        window.sessionStorage.setItem('user', JSON.stringify(res.object))
         // 用replace 不让它返回登录页 push可以返回的
         this.$router.replace('/home')
       })
