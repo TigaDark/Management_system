@@ -47,8 +47,10 @@ export default {
         }))
         // user信息存到sessionStorage  注意吧obj对象转化
         window.sessionStorage.setItem('user', JSON.stringify(res.object))
-        // 用replace 不让它返回登录页 push可以返回的
-        this.$router.replace('/home')
+        // 用replace 不让它返回登录页 push可以返回的 同时判断是不是有redirect字段
+        // 有的话表示访问界面时没登陆  登录后给他跳转回去
+        const toPath = this.$route.query.redirect
+        this.$router.replace((toPath === undefined || toPath === '/') ? '/home' : toPath)
       })
     }
   }

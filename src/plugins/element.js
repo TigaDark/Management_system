@@ -5,7 +5,7 @@ import {
   , Input, Message, Container, Aside, Main, Header, Menu, MenuItem, Submenu, Breadcrumb, BreadcrumbItem, Card, Col, Row, Table
   , TableColumn, Switch
   , Tooltip, Pagination, Dialog, Dropdown, DropdownItem, DropdownMenu, Avatar, Steps, Step, MessageBox, Timeline, TimelineItem, Tag, Select, Option, DatePicker
-  , Checkbox, CheckboxButton
+  , Checkbox, CheckboxButton, Tabs, TabPane
 } from 'element-ui'
 
 Vue.use(CheckboxButton)
@@ -44,5 +44,7 @@ Vue.use(Tag)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(DatePicker)
+Vue.use(Tabs)
+Vue.use(TabPane)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox
